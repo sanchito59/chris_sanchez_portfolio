@@ -1,9 +1,11 @@
 import React from "react";
+import Base from "../../components/Base";
 import styled from "styled-components";
 
 const Container = styled.div`
   width: 80%;
   margin: 0 auto;
+  color: rgb(250, 250, 250);
 `;
 
 const Name = styled.span`
@@ -12,7 +14,7 @@ const Name = styled.span`
 
 const About = () => {
   return (
-    <>
+    <Base>
       <Container>
         <p>
           My name is <Name>Chris Sanchez</Name> and I am a Full Stack Developer
@@ -27,7 +29,7 @@ const About = () => {
           growing.
         </p>
       </Container>
-    </>
+    </Base>
   );
 };
 
