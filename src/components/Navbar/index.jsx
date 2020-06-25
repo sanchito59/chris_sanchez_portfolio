@@ -38,6 +38,14 @@ const Navlink = styled(Link)`
     props.scrolledDown ? "rgb(251, 247, 245);" : "rgb(22, 22, 22)"};
 `;
 
+const EmailLink = styled.a`
+  color: rgb(22, 22, 22);
+  text-decoration: none;
+
+  color: ${(props) =>
+    props.scrolledDown ? "rgb(251, 247, 245);" : "rgb(22, 22, 22)"};
+`;
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -58,14 +66,19 @@ const Navbar = () => {
         </Navlink>
       </LinkContainer>
       <LinkContainer scrolledDown={scrolled}>
-        <Navlink scrolledDown={scrolled} to="/about">
-          ABOUT
+        <Navlink scrolledDown={scrolled} to="/resume">
+          RESUME
         </Navlink>
       </LinkContainer>
       <LinkContainer scrolledDown={scrolled}>
         <Navlink scrolledDown={scrolled} to="/portfolio">
-          WORK
+          PORTFOLIO
         </Navlink>
+      </LinkContainer>
+      <LinkContainer scrolledDown={scrolled}>
+        <EmailLink href="mailto: c.sanch7@gmail.com" scrolledDown={scrolled}>
+          c.sanch7@gmail.com
+        </EmailLink>
       </LinkContainer>
     </NavbarContainer>
   );
