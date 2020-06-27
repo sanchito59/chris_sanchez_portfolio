@@ -73,14 +73,14 @@ const ProjectCard = (props) => {
       <ProjectTitle lg={24} md={24} sm={24} xs={24}>
         {title}
       </ProjectTitle>
-      <a href={liveDemo ? liveDemo : source} target="_blank">
+      <a href={liveDemo ? liveDemo : source} target="_blank" rel="noopener noreferrer">
         <Col lg={24} md={24} sm={24} xs={24}>
           <ProjectImage src={image} alt={title}></ProjectImage>
         </Col>
       </a>
       <DemoLinksRow type="flex" justify="center">
-        <Col lg={12} md={12} sm={12} xs={12}><a href={liveDemo} target="_blank"><StyledIcon icon={faExternalLinkAlt} />Live Demo</a></Col>
-        <Col lg={12} md={12} sm={12} xs={12}><a href={source} target="_blank"><StyledIcon icon={faGithub} />Source Code</a></Col>
+        <Col lg={12} md={12} sm={12} xs={12}><a href={liveDemo} target="_blank" rel="noopener noreferrer"><StyledIcon icon={faExternalLinkAlt} />Live Demo</a></Col>
+        <Col lg={12} md={12} sm={12} xs={12}><a href={source} target="_blank" rel="noopener noreferrer"><StyledIcon icon={faGithub} />Source Code</a></Col>
       </DemoLinksRow>
       <Description lg={24} md={24} sm={24} xs={24}>
         {description}

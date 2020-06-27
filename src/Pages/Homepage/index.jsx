@@ -98,7 +98,11 @@ const Homepage = () => {
             return (
               <IconCol>
                 <IconDiv>
-                  <a href={social.link} target="_blank">
+                  <a
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <SocialIcon icon={social.icon} />
                   </a>
                 </IconDiv>
