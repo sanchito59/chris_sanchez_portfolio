@@ -1,7 +1,10 @@
 import React from "react";
+import styled from "styled-components";
 import Base from "../../components/Base";
+import SectionTitle from "../../components/SectionTitle";
 import { Col, Row } from "antd";
 import ProjectCard from "../../components/Card";
+import FlexContainer from "../../atoms/FlexContainer";
 import shelfSearch from "../../assets/images/shelfSearch.png";
 import applianceHub from "../../assets/images/applianceHub.png";
 import wastelandBot from "../../assets/images/wastelandBot.png";
@@ -34,11 +37,11 @@ const projects = [
     technologies: [
       "Ruby/Rails",
       "PostgreSQL",
-      "Behavior Driven Development",
       "User Stories",
       "rspec",
       "capybara",
       "100% test coverage",
+      "Behavior Driven Development",
     ],
     sourceCode: "https://github.com/sanchito59/Appliance-Hub",
     liveDemo: "https://blooming-fortress-25155.herokuapp.com/",
@@ -60,25 +63,48 @@ const projects = [
   },
 ];
 
+const ProjectRow = styled(Row)`
+  margin: 24px;
+
+  @media only screen and (max-width: 600px) {
+    margin: 12px;
+  }
+`;
+
+const ProjectColumn = styled(Col)`
+  padding: 24px;
+
+  @media only screen and (max-width: 600px) {
+    padding: 24px 0px;
+  }
+`;
+
 const Portfolio = () => {
   return (
     <Base>
-      <Row type="flex" justify="center">
-        {projects.map((project) => {
-          return (
-            <Col lg={6} sm={20} md={20}>
-              <ProjectCard
-                title={project.title}
-                image={project.image}
-                description={project.description}
-                technologies={project.technologies}
-                source={project.sourceCode}
-                liveDemo={project.liveDemo}
-              />
-            </Col>
-          );
-        })}
+      <Row justify="center">
+        <Col lg={24} sm={24} md={24}>
+          <SectionTitle>Projects</SectionTitle>
+        </Col>
       </Row>
+      <FlexContainer>
+        <ProjectRow display="flex" justify="center">
+          {projects.map((project) => {
+            return (
+              <ProjectColumn lg={8} sm={20} md={20}>
+                <ProjectCard
+                  title={project.title}
+                  image={project.image}
+                  description={project.description}
+                  technologies={project.technologies}
+                  source={project.sourceCode}
+                  liveDemo={project.liveDemo}
+                />
+              </ProjectColumn>
+            );
+          })}
+        </ProjectRow>
+      </FlexContainer>
     </Base>
   );
 };

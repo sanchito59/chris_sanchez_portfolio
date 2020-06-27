@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'antd/dist/antd.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Homepage from './Pages/Homepage';
 import Resume from './Pages/Resume';
@@ -14,10 +14,10 @@ const App = () => {
         <Route exact path="/">
           <Homepage />
         </Route>
-        <Route exact path="/resume">
+        <Route path="/resume">
           <Resume />
         </Route>
-        <Route exactpath="/portfolio">
+        <Route path="/portfolio">
           <Portfolio />
         </Route>
       </Switch>

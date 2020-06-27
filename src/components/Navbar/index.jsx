@@ -9,6 +9,7 @@ const NavbarContainer = styled.nav`
   display: flex;
   position: fixed;
   top: 0;
+  z-index: 1;
   background-color: ${(props) =>
     props.scrolledDown ? "rgb(22, 22, 22)" : "rgb(251, 247, 245);"};
 `;
