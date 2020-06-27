@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const NavbarContainer = styled.nav`
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 3.5px;
   width: 100%;
   height: 40px;
   line-height: 2.5;
@@ -64,11 +66,6 @@ const Navbar = () => {
       <LinkContainer scrolledDown={scrolled}>
         <Navlink scrolledDown={scrolled} to="/">
           HOME
-        </Navlink>
-      </LinkContainer>
-      <LinkContainer scrolledDown={scrolled}>
-        <Navlink scrolledDown={scrolled} to="/resume">
-          RESUME
         </Navlink>
       </LinkContainer>
       <LinkContainer scrolledDown={scrolled}>

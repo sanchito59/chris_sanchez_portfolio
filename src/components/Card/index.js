@@ -27,6 +27,7 @@ const DemoLinksRow = styled(Row)`
   background: rgb(22, 22, 22);
   color: rgb(251, 247, 245);
   padding: 8px 8px;
+  padding-top: 0px;
 
   a {
     color: white;
@@ -39,6 +40,7 @@ const DemoLinksRow = styled(Row)`
 
 const StyledIcon = styled(FontAwesomeIcon)`
   margin-right: 8px;
+  margin-bottom: 0px;
 `;
 
 const Description = styled(Col)`
@@ -51,6 +53,10 @@ const Description = styled(Col)`
 
 const TechnologyRow = styled(Row)`
   padding: 6px 8px;
+`;
+
+const TechnologyTitle = styled.h2`
+  padding: 0px 8px;
 `;
 
 const Technologies = styled(Col)`
@@ -80,9 +86,10 @@ const ProjectCard = (props) => {
         {description}
       </Description>
       <Technologies lg={24} md={24} sm={24} xs={24}>
+        <TechnologyTitle>Technologies</TechnologyTitle>
         <TechnologyRow>
           {technologies.map((technology) => {
-            return <Col span={12} key={title}>
+            return <Col span={12} key={source}>
               <li>
                 {technology}
               </li>
