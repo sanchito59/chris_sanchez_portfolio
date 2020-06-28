@@ -80,25 +80,29 @@ const ExperienceCol = styled(Col)`
   margin-bottom: 12px !important;
 `;
 
-const MainJobInfoRow = styled(Row)`
+const MainInfoRow = styled(Row)`
   margin: 12px 0px;
   font-size: 18px;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
+  }
 `;
 
-const CompanyCol = styled(Col)`
+const ItalicDetailCol = styled(Col)`
   font-style: italic;
   margin: 0px 5px;
 `;
 
-const LocationCol = styled(Col)`
+const DetailCol = styled(Col)`
   margin: 0px 5px;
 `;
 
-const JobTitleCol = styled(Col)`
+const MainDetailCol = styled(Col)`
   font-weight: bold;
 `;
 
-const JobDuration = styled(Row)`
+const DurationRow = styled(Row)`
   margin-bottom: 8px;
 `;
 
@@ -195,16 +199,80 @@ const Homepage = () => {
           {workExperience.map((experience) => {
             return (
               <ExperienceCol span={24}>
-                <MainJobInfoRow style={{ width: "100%;" }}>
-                  <JobTitleCol>{experience.title},</JobTitleCol>
-                  <CompanyCol>{experience.company},</CompanyCol>
-                  <LocationCol>{experience.location}</LocationCol>
-                </MainJobInfoRow>
-                <JobDuration style={{ width: "100%;" }}>
+                <MainInfoRow style={{ width: "100%;" }}>
+                  <MainDetailCol>{experience.title} </MainDetailCol>
+                  <Row>
+                    <ItalicDetailCol>{experience.company},</ItalicDetailCol>
+                    <DetailCol>{experience.location}</DetailCol>
+                  </Row>
+                </MainInfoRow>
+                <DurationRow style={{ width: "100%;" }}>
                   {experience.startDate} - {experience.endDate}
-                </JobDuration>
+                </DurationRow>
                 <ExperienceRow style={{ width: "100%;" }}>
                   {experience.responsibilities.map((responsibility) => {
+                    return (
+                      <Col span={24}>
+                        <li>{responsibility}</li>
+                      </Col>
+                    );
+                  })}
+                </ExperienceRow>
+              </ExperienceCol>
+            );
+          })}
+        </Row>
+      </FlexContainer>
+    );
+  };
+
+  const education = [
+    {
+      school: "Epicodus",
+      location: "Portland, OR,",
+      degree: "Web Development - Ruby/Rails, React",
+      startDate: "October 2019",
+      endDate: "March 2020",
+      experience: [
+        "Completed full-time, 27-wek program in web and open-source development",
+        "Build over 60 applications with JavaScript, Ruby, React, PostgreSQL",
+        "Developed interpersonal and communication skills through pairing and group projects",
+        "Studied Object Oriented Programming, MVC, Behavior Driven Development, Test Driven Development, UI/UX, git, and more",
+      ],
+    },
+    {
+      school: "University of Oregon",
+      location: "Eugene, OR,",
+      degree: "BA English Literature",
+      startDate: "September 2012",
+      endDate: "June 2016",
+      experience: [
+        "Collaborated with others to proofread and publish works of writing in local or University journals such as Oregon Voice and Unbound.",
+      ],
+    },
+  ];
+
+  const EducationRow = () => {
+    return (
+      <FlexContainer>
+        <Row style={{ width: "100%;" }}>
+          {education.map((educationalDetail) => {
+            return (
+              <ExperienceCol span={24}>
+                <MainInfoRow style={{ width: "100%;" }}>
+                  <MainDetailCol>{educationalDetail.school} </MainDetailCol>
+                  <Row>
+                    <DetailCol>{educationalDetail.location}</DetailCol>
+                    <ItalicDetailCol>
+                      {educationalDetail.degree}
+                    </ItalicDetailCol>
+                  </Row>
+                </MainInfoRow>
+                <DurationRow style={{ width: "100%;" }}>
+                  {educationalDetail.startDate} - {educationalDetail.endDate}
+                </DurationRow>
+                <ExperienceRow style={{ width: "100%;" }}>
+                  {educationalDetail.experience.map((responsibility) => {
                     return (
                       <Col span={24}>
                         <li>{responsibility}</li>
@@ -224,7 +292,7 @@ const Homepage = () => {
     <Base>
       <FlexContainer>
         <Row display="flex" justify="center">
-          <Col span={18}>
+          <Col span={20}>
             <Row>
               <ImageColumn lg={4} sm={24} md={24}>
                 <FlexContainer>
@@ -262,9 +330,17 @@ const Homepage = () => {
       </FlexContainer>
       <ReactWOW animation="fadeInUp">
         <Row display="flex" justify="center">
-          <Col span={18}>
+          <Col span={20}>
             <SectionTitle>Work Experience</SectionTitle>
             <WorkExperienceRow />
+          </Col>
+        </Row>
+      </ReactWOW>
+      <ReactWOW animation="fadeInUp">
+        <Row display="flex" justify="center">
+          <Col span={20}>
+            <SectionTitle>Education</SectionTitle>
+            <EducationRow />
           </Col>
         </Row>
       </ReactWOW>
