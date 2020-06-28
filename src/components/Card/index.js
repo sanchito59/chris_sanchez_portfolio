@@ -27,7 +27,6 @@ const DemoLinksRow = styled(Row)`
   background: rgb(22, 22, 22);
   color: rgb(251, 247, 245);
   padding: 8px 8px;
-  padding-top: 0px;
 
   a {
     color: white;
@@ -57,6 +56,8 @@ const TechnologyRow = styled(Row)`
 
 const TechnologyTitle = styled.h2`
   padding: 0px 8px;
+  margin-bottom: 0px;
+  text-decoration: underline;
 `;
 
 const Technologies = styled(Col)`

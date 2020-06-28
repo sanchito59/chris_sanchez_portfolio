@@ -4,6 +4,7 @@ import ReactWOW from "react-wow";
 import { Col, Row } from "antd";
 import Base from "../../components/Base";
 import FlexContainer from "../../atoms/FlexContainer";
+import SectionTitle from "../../components/SectionTitle";
 import portrait from "./../../assets/images/portrait.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -18,8 +19,7 @@ const IconCol = styled(Col)`
 `;
 
 const IconDiv = styled.div`
-  width: 80px;
-  height: 80px;
+  margin-right: 12px;
 `;
 
 const SocialIcon = styled(FontAwesomeIcon)`
@@ -30,6 +30,10 @@ const SocialIcon = styled(FontAwesomeIcon)`
   transition: transform 350ms;
   :hover {
     transform: translateY(-5px);
+  }
+  @media only screen and (max-width: 600px) {
+    width: 40px !important;
+    height: 40px !important;
   }
 `;
 
@@ -71,6 +75,41 @@ const Name = styled.span`
   font-size: 20px;
 `;
 
+const ExperienceCol = styled(Col)`
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+`;
+
+const MainJobInfoRow = styled(Row)`
+  margin: 12px 0px;
+  font-size: 18px;
+`;
+
+const CompanyCol = styled(Col)`
+  font-style: italic;
+  margin: 0px 5px;
+`;
+
+const LocationCol = styled(Col)`
+  margin: 0px 5px;
+`;
+
+const JobTitleCol = styled(Col)`
+  font-weight: bold;
+`;
+
+const JobDuration = styled(Row)`
+  margin-bottom: 8px;
+`;
+
+const ExperienceRow = styled(Row)`
+  margin-left: 30px;
+
+  @media only screen and (max-width: 600px) {
+    margin-left: 0px;
+  }
+`;
+
 const Homepage = () => {
   const socialLinks = [
     {
@@ -90,6 +129,7 @@ const Homepage = () => {
       icon: faEnvelope,
     },
   ];
+
   const IconRow = () => {
     return (
       <FlexContainer>
@@ -107,6 +147,72 @@ const Homepage = () => {
                   </a>
                 </IconDiv>
               </IconCol>
+            );
+          })}
+        </Row>
+      </FlexContainer>
+    );
+  };
+
+  const workExperience = [
+    {
+      company: "Propopen",
+      location: "Portland, OR",
+      title: "Full Stack Developer - Ruby/Rails, React",
+      startDate: "March 2020",
+      endDate: "Present",
+      responsibilities: [
+        "Built CRUD functionality with GraphQL/Apollo, Ruby, React, and PostgreSQL",
+        "Managed milestones from initial steps through final delivery.",
+        "Worked closely with Product Manager and team during agile sprints contributing to larger cycles as well as individually led cycles",
+        "Gathered and defined customer requirements to develop clear specifications for creating well-organized project plans",
+        "Contributed ideas and suggestions in team meetings and delivered updates on deadlines, designs and enhancements",
+        "Merged 100+ pull requests for features such as contact management tools, Excel integration, CRM, account management, the signup / onboarding flow",
+        "Built front-end application features using React.js with scale and reuse-ability such as carousels, galleries, pagination patterns, dropdowns, and forms",
+        "Performed code reviews on pull requests to ensure code meets production level standards of readability, scalability, and maintainability",
+      ],
+    },
+    {
+      company: "Whole Foods Market",
+      location: "Tualitan, OR",
+      title: "Team Trainer",
+      startDate: "August 2017",
+      endDate: "November 2018",
+      responsibilities: [
+        "Provided management with feedback regarding employee performance and training needs.",
+        "Cross-trained existing employees in order to maximize team performance.",
+        "Successfully integrated new hires onto department teams by teaching company core values and specific department procedures",
+        "Created training documents for future new hires and Team Trainers",
+        "Demonstrated new products, procedures and techniques to employees.",
+      ],
+    },
+  ];
+
+  const WorkExperienceRow = () => {
+    return (
+      <FlexContainer>
+        <Row style={{ width: "100%;" }}>
+          {workExperience.map((experience) => {
+            return (
+              <ExperienceCol span={24}>
+                <MainJobInfoRow style={{ width: "100%;" }}>
+                  <JobTitleCol>{experience.title},</JobTitleCol>
+                  <CompanyCol>{experience.company},</CompanyCol>
+                  <LocationCol>{experience.location}</LocationCol>
+                </MainJobInfoRow>
+                <JobDuration style={{ width: "100%;" }}>
+                  {experience.startDate} - {experience.endDate}
+                </JobDuration>
+                <ExperienceRow style={{ width: "100%;" }}>
+                  {experience.responsibilities.map((responsibility) => {
+                    return (
+                      <Col span={24}>
+                        <li>{responsibility}</li>
+                      </Col>
+                    );
+                  })}
+                </ExperienceRow>
+              </ExperienceCol>
             );
           })}
         </Row>
@@ -136,11 +242,11 @@ const Homepage = () => {
                   <Container>
                     <p>
                       My name is <Name>Chris Sanchez</Name> and I am a Full
-                      Stack Developer from Portland, Oregon. I am drawn to Full
-                      Stack Development because I love digging into both the
-                      backend architecture of an app as well as the frontend
-                      user interface and experience. I work with JavaScript ES6,
-                      React, Ruby on Rails, PostgreSQL, GraphQL, and Apollo
+                      Stack Developer from Portland, Oregon. I love digging into
+                      both the backend architecture of an application as well as
+                      the frontend user interface and experience, joining the
+                      two into a complete experience. I work with JavaScript
+                      ES6, React, Ruby on Rails, PostgreSQL, GraphQL, and Apollo
                       daily. I am an agile learner, quick to adapt, and
                       endlessly curious and engaged with learning and growing.
                     </p>
@@ -154,6 +260,14 @@ const Homepage = () => {
           </Col>
         </Row>
       </FlexContainer>
+      <ReactWOW animation="fadeInUp">
+        <Row display="flex" justify="center">
+          <Col span={18}>
+            <SectionTitle>Work Experience</SectionTitle>
+            <WorkExperienceRow />
+          </Col>
+        </Row>
+      </ReactWOW>
     </Base>
   );
 };

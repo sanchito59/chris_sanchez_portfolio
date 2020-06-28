@@ -22,8 +22,10 @@ const projects = [
       "NPM",
       "Styled Components",
       "Ant Design",
+      "Web Speech API",
       "Google API",
       "Open Library API",
+      "NYT's API",
       "Goodreads API",
     ],
     sourceCode: "https://github.com/sanchito59/Shelf-Search",
@@ -84,7 +86,7 @@ const Portfolio = () => {
     <Base>
       <Row justify="center">
         <Col lg={24} sm={24} md={24}>
-          <SectionTitle>Projects</SectionTitle>
+          <SectionTitle center={true}>Projects</SectionTitle>
         </Col>
       </Row>
       <FlexContainer>
