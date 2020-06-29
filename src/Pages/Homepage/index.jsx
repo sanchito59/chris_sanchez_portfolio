@@ -234,7 +234,7 @@ const Homepage = () => {
       startDate: "October 2019",
       endDate: "March 2020",
       experience: [
-        "Completed full-time, 27-wek program in web and open-source development",
+        "Completed full-time, 27-week program in web and open-source development",
         "Built over 60 applications with JavaScript, Ruby, React, PostgreSQL",
         "Developed interpersonal and communication skills through pairing and group projects",
         "Studied Object Oriented Programming, MVC, Behavior Driven Development, Test Driven Development, UI/UX, git, and more",
