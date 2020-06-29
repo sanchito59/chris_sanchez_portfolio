@@ -16,6 +16,14 @@ const ProjectTitle = styled(Col)`
   border-top-right-radius: 3px;
   padding: 8px;
   font-size: 18px;
+
+  a {
+    color: white;
+    :hover {
+      color: #6a95d4;
+      text-decoration: underline;
+    }
+  }
 `;
 
 const ProjectImage = styled.img`
@@ -72,7 +80,9 @@ const ProjectCard = (props) => {
   return (
     <OuterCard>
       <ProjectTitle lg={24} md={24} sm={24} xs={24}>
-        {title}
+        <a href={liveDemo ? liveDemo : source} target="_blank" rel="noopener noreferrer">
+          {title}
+        </a>
       </ProjectTitle>
       <a href={liveDemo ? liveDemo : source} target="_blank" rel="noopener noreferrer">
         <Col lg={24} md={24} sm={24} xs={24}>

@@ -247,7 +247,7 @@ const Homepage = () => {
       startDate: "September 2012",
       endDate: "June 2016",
       experience: [
-        "Collaborated with others to proofread and publish works of writing in local or University journals such as Oregon Voice and Unbound.",
+        "Collaborated with others to proofread and publish works of writing in university journals such as Oregon Voice and Unbound.",
       ],
     },
   ];
@@ -285,6 +285,67 @@ const Homepage = () => {
           })}
         </Row>
       </FlexContainer>
+    );
+  };
+
+  const frontendSkills = [
+    "JavaScript ES6",
+    "React",
+    "Rails",
+    "HTML5",
+    "CSS3",
+    "SASS/SCSS",
+    "jQuery",
+    "Ant Design, Material, Bootstrap",
+  ];
+
+  const backendSkills = [
+    "Ruby/Rails",
+    "PostgreSQL",
+    "GraphQL / Apollo",
+    "API / JSON / XML",
+  ];
+
+  const miscSkills = [
+    "Git / Github",
+    "Object Oriented Programming",
+    "Test Driven Development",
+    "Behavior Driven Development",
+    "Jest / rspec",
+    "Capybara",
+    "NPM / yarn",
+    "Pair Programming",
+    "Adobe Photoshop",
+  ];
+
+  const SkillsRow = () => {
+    return (
+      <Row style={{ width: "100%;" }}>
+        <Col lg={8} sm={24}>
+          <h2>Frontend</h2>
+          <ul>
+            {frontendSkills.map((skill) => {
+              return <li>{skill}</li>;
+            })}
+          </ul>
+        </Col>
+        <Col lg={8} sm={24}>
+          <h2>Backend</h2>
+          <ul>
+            {backendSkills.map((skill) => {
+              return <li>{skill}</li>;
+            })}
+          </ul>
+        </Col>
+        <Col lg={8} sm={24}>
+          <h2>Miscellaneous</h2>
+          <ul>
+            {miscSkills.map((skill) => {
+              return <li>{skill}</li>;
+            })}
+          </ul>
+        </Col>
+      </Row>
     );
   };
 
@@ -341,6 +402,14 @@ const Homepage = () => {
           <Col span={20}>
             <SectionTitle>Education</SectionTitle>
             <EducationRow />
+          </Col>
+        </Row>
+      </ReactWOW>
+      <ReactWOW animation="fadeInUp">
+        <Row display="flex" justify="center">
+          <Col span={20}>
+            <SectionTitle>Technical Skills</SectionTitle>
+            <SkillsRow />
           </Col>
         </Row>
       </ReactWOW>

@@ -8,6 +8,7 @@ import FlexContainer from "../../atoms/FlexContainer";
 import shelfSearch from "../../assets/images/shelfSearch.png";
 import applianceHub from "../../assets/images/applianceHub.png";
 import wastelandBot from "../../assets/images/wastelandBot.png";
+import ipsumSample from "../../assets/images/ipsumSample.png";
 
 const projects = [
   {
@@ -18,6 +19,7 @@ const projects = [
     technologies: [
       "JavaScript",
       "React",
+      "React Router",
       "Webpack",
       "NPM",
       "Styled Components",
@@ -62,6 +64,21 @@ const projects = [
     ],
     sourceCode: "https://github.com/sanchito59/ts_wastelandbot",
     liveDemo: "https://twitter.com/TSwasteland_bot",
+  },
+  {
+    title: "Videogame Ipsum",
+    image: ipsumSample,
+    description:
+      "Need some placeholder text to display content with? Video Game Ipsum is a video game themed lorem ipsum generator built with React for video game, tech, or whatever themed website or copy you're working on!",
+    technologies: [
+      "JavaScript",
+      "React",
+      "styled-components",
+      "clipboard.js",
+      "Agile / KANBAN workflow",
+    ],
+    sourceCode: "https://github.com/sanchito59/videogame_ipsum",
+    liveDemo: "https://videogameipsum.netlify.app/",
   },
 ];
 
