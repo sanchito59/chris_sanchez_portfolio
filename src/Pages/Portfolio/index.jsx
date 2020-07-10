@@ -72,6 +72,7 @@ const projects = [
       "Need some placeholder text to display content with? Video Game Ipsum is a video game themed lorem ipsum generator built with React for video game, tech, or whatever themed website or copy you're working on!",
     technologies: [
       "JavaScript",
+      "Web scraping",
       "React",
       "styled-components",
       "clipboard.js",

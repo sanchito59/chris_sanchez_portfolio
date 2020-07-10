@@ -7,6 +7,12 @@ import { Col, Row } from 'antd'
 
 const OuterCard = styled.div`
   max-width: 380px;
+
+  transition: transform 0.3s;
+  &:hover {
+    transform: translateY(-3px);
+    cursor: pointer;
+  }
 `;
 
 const ProjectTitle = styled(Col)`

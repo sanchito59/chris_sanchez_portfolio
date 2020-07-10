@@ -7,7 +7,8 @@ import FlexContainer from "../../atoms/FlexContainer";
 import SectionTitle from "../../components/SectionTitle";
 import portrait from "./../../assets/images/portrait.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import Resume from "./../../assets/documents/ChrisSanchezJuly2020pdf.pdf";
 import {
   faLinkedinIn,
   faGithub,
@@ -131,6 +132,10 @@ const Homepage = () => {
     {
       link: "mailto: c.sanch7@gmail.com",
       icon: faEnvelope,
+    },
+    {
+      link: Resume,
+      icon: faBriefcase,
     },
   ];
 
