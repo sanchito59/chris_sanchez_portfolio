@@ -19,10 +19,13 @@ const StyledRow = styled(Row)`
   width: 100%;
 
   div:nth-child(5) {
-    /* top: 4px; */
-
     svg {
       height: 50px !important;
+
+      @media only screen and (max-width: 600px) {
+        width: 40px !important;
+        height: 40px !important;
+      }
     }
   }
 `;
