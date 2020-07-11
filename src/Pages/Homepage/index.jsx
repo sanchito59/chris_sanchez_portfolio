@@ -7,13 +7,25 @@ import FlexContainer from "../../atoms/FlexContainer";
 import SectionTitle from "../../components/SectionTitle";
 import portrait from "./../../assets/images/portrait.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import Resume from "./../../assets/documents/ChrisSanchezJuly2020pdf.pdf";
 import {
   faLinkedinIn,
   faGithub,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+
+const StyledRow = styled(Row)`
+  width: 100%;
+
+  div:nth-child(5) {
+    /* top: 4px; */
+
+    svg {
+      height: 50px !important;
+    }
+  }
+`;
 
 const IconCol = styled(Col)`
   margin-top: 10px;
@@ -32,6 +44,7 @@ const SocialIcon = styled(FontAwesomeIcon)`
   :hover {
     transform: translateY(-5px);
   }
+
   @media only screen and (max-width: 600px) {
     width: 40px !important;
     height: 40px !important;
@@ -135,14 +148,14 @@ const Homepage = () => {
     },
     {
       link: Resume,
-      icon: faBriefcase,
+      icon: faFileAlt,
     },
   ];
 
   const IconRow = () => {
     return (
       <FlexContainer>
-        <Row style={{ width: "100%" }}>
+        <StyledRow>
           {socialLinks.map((social) => {
             return (
               <IconCol>
@@ -158,7 +171,7 @@ const Homepage = () => {
               </IconCol>
             );
           })}
-        </Row>
+        </StyledRow>
       </FlexContainer>
     );
   };

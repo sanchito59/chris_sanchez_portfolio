@@ -11,7 +11,6 @@ const OuterCard = styled.div`
   transition: transform 0.3s;
   &:hover {
     transform: translateY(-3px);
-    cursor: pointer;
   }
 `;
 

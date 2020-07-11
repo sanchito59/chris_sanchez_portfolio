@@ -85,6 +85,7 @@ const projects = [
 
 const ProjectRow = styled(Row)`
   margin: 24px;
+  width: 100%;
 
   @media only screen and (max-width: 600px) {
     margin: 12px;
@@ -93,6 +94,8 @@ const ProjectRow = styled(Row)`
 
 const ProjectColumn = styled(Col)`
   padding: 24px;
+  display: flex;
+  justify-content: center;
 
   @media only screen and (max-width: 600px) {
     padding: 24px 0px;
