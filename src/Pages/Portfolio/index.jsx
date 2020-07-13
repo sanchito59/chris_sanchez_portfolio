@@ -15,7 +15,7 @@ const projects = [
     title: "Shelf Search",
     image: shelfSearch,
     description:
-      "Shelf Search allows a user to search for books and find an ebook if available. Ability to search for literary events by zipcode. Ability to listen to and search for poetry.",
+      "Shelf Search allows a user to search for books and find an ebook if available. Users also have the ability to search for literary events by zipcode and listen to and search for poetry. Built with React, JavaScript ES6, Google API, and other 3rd party APIs and libraries.",
     technologies: [
       "JavaScript",
       "React",
@@ -54,7 +54,7 @@ const projects = [
     title: "TS Wasteland Bot",
     image: wastelandBot,
     description:
-      "TS Waste Land Bot is a Twitter bot built with Node.js and the Twitter API that tweets 4 lines of The Waste Land by T. S. Eliot every hour, ad infinitum.",
+      "TS Waste Land Bot is a Twitter bot built with Node.js and the Twitter API that tweets 4 lines of The Waste Land by T. S. Eliot every hour, ad infinitum. Deployed with Heroku Dynamos running an hourly node worker.",
     technologies: [
       "Node.js",
       "JavaScript",
@@ -69,7 +69,7 @@ const projects = [
     title: "Videogame Ipsum",
     image: ipsumSample,
     description:
-      "Need some placeholder text to display content with? Video Game Ipsum is a video game themed lorem ipsum generator built with React for video game, tech, or whatever themed website or copy you're working on!",
+      "Need some placeholder text to display content with? Video Game Ipsum is a video game themed lorem ipsum generator built with React for video game, tech, or whatever themed website or copy you're working on! Utilized web scraping of XML and the DOM, Agile workflow with cards, JavaScript, and React.",
     technologies: [
       "JavaScript",
       "Web scraping",

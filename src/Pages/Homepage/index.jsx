@@ -131,6 +131,16 @@ const ExperienceRow = styled(Row)`
   }
 `;
 
+const StyledListItem = styled.li`
+  line-height: 2;
+
+  transition: font-size 0.4s, padding 0.4s;
+  :hover {
+    font-size: 15px;
+    padding: 4px 0px;
+  }
+`;
+
 const Homepage = () => {
   const socialLinks = [
     {
@@ -190,11 +200,12 @@ const Homepage = () => {
         "Built CRUD functionality with GraphQL/Apollo, Ruby, React, and PostgreSQL",
         "Managed milestones from initial steps through final delivery.",
         "Worked closely with Product Manager and team during agile sprints contributing to larger cycles as well as individually led cycles",
-        "Gathered and defined customer requirements to develop clear specifications for creating well-organized project plans",
-        "Contributed ideas and suggestions in team meetings and delivered updates on deadlines, designs and enhancements",
-        "Merged 100+ pull requests for features such as contact management tools, Excel integration, CRM, account management, the signup / onboarding flow",
-        "Built front-end application features using React.js with scale and reuse-ability such as carousels, galleries, pagination patterns, dropdowns, and forms",
         "Performed code reviews on pull requests to ensure code meets production level standards of readability, scalability, and maintainability",
+        "Gathered and defined customer requirements to develop clear specifications for creating well-organized project plans",
+        "Integrated Sendgrid to generate transactional emails",
+        "Contributed ideas and suggestions in team meetings and delivered updates on deadlines, designs and enhancements",
+        "Merged 100+ pull requests for features such as contact management tools, Excel integration, CRM, account management, and the signup / onboarding flow",
+        "Built front-end application features using React.js with scale and reuse-ability such as carousels, galleries, pagination patterns, dropdowns, and forms",
       ],
     },
     {
@@ -234,7 +245,7 @@ const Homepage = () => {
                   {experience.responsibilities.map((responsibility) => {
                     return (
                       <Col span={24}>
-                        <li>{responsibility}</li>
+                        <StyledListItem>{responsibility}</StyledListItem>
                       </Col>
                     );
                   })}
@@ -296,7 +307,7 @@ const Homepage = () => {
                   {educationalDetail.experience.map((responsibility) => {
                     return (
                       <Col span={24}>
-                        <li>{responsibility}</li>
+                        <StyledListItem>{responsibility}</StyledListItem>
                       </Col>
                     );
                   })}
@@ -329,6 +340,7 @@ const Homepage = () => {
 
   const miscSkills = [
     "Git / Github",
+    "Accessibility",
     "Object Oriented Programming",
     "Test Driven Development",
     "Behavior Driven Development",

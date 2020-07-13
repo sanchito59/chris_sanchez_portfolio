@@ -12,6 +12,7 @@ const NavbarContainer = styled.nav`
   position: fixed;
   top: 0;
   z-index: 1;
+  transition: background-color 0.7s;
   background-color: ${(props) =>
     props.scrolledDown ? "rgb(22, 22, 22)" : "rgb(251, 247, 245);"};
 `;
@@ -20,7 +21,7 @@ const LinkContainer = styled.div`
   height: 40px;
   padding-left: 20px;
   padding-right: 20px;
-  transition: background 0.6s, color 0.7s;
+  transition: background 0.7s, color 0.7s;
 
   :hover {
     background-color: ${(props) =>

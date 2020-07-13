@@ -39,7 +39,8 @@ const ProjectImage = styled.img`
 const DemoLinksRow = styled(Row)`
   background: rgb(22, 22, 22);
   color: rgb(251, 247, 245);
-  padding: 8px 8px;
+  padding: 8px;
+  font-weight: 600;
 
   a {
     color: white;
@@ -59,7 +60,7 @@ const Description = styled(Col)`
   border-left: 2px solid rgb(22, 22, 22);
   border-right: 2px solid rgb(22, 22, 22);
   border-bottom: 2px solid rgb(22, 22, 22);
-  padding: 4px 8px;
+  padding: 8px;
   background: white;
 `;
 
@@ -77,6 +78,8 @@ const Technologies = styled(Col)`
   border-left: 2px solid rgb(22, 22, 22);
   border-right: 2px solid rgb(22, 22, 22);
   border-bottom: 2px solid rgb(22, 22, 22);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
   background: white;
 `;
 
