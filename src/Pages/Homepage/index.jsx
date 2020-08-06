@@ -148,6 +148,11 @@ const FooterLink = styled.a`
   h2 {
     margin-right: 8px !important;
     transition: transform 500ms ease-out, font-size 500ms ease-out;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 14px !important;
+      font-weight: 600;
+    }
   }
 
   h2:hover {
@@ -159,6 +164,10 @@ const FooterLink = styled.a`
 
 const Breadcrumb = styled.span`
   font-weight: 600;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const Homepage = () => {
