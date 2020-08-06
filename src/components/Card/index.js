@@ -15,8 +15,8 @@ const OuterCard = styled.div`
 `;
 
 const ProjectTitle = styled(Col)`
-  background: rgb(22, 22, 22);
-  color: rgb(251, 247, 245);
+  background: #00171f;
+  color: #fdfffc;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   padding: 8px;
@@ -37,8 +37,8 @@ const ProjectImage = styled.img`
 `;
 
 const DemoLinksRow = styled(Row)`
-  background: rgb(22, 22, 22);
-  color: rgb(251, 247, 245);
+  background: #00171f;
+  color: #fdfffc;
   padding: 8px;
   font-weight: 600;
 
@@ -57,9 +57,9 @@ const StyledIcon = styled(FontAwesomeIcon)`
 `;
 
 const Description = styled(Col)`
-  border-left: 2px solid rgb(22, 22, 22);
-  border-right: 2px solid rgb(22, 22, 22);
-  border-bottom: 2px solid rgb(22, 22, 22);
+  border-left: 2px solid #00171f;
+  border-right: 2px solid #00171f;
+  border-bottom: 2px solid #00171f;
   padding: 8px;
   background: white;
 `;
@@ -75,9 +75,9 @@ const TechnologyTitle = styled.h2`
 `;
 
 const Technologies = styled(Col)`
-  border-left: 2px solid rgb(22, 22, 22);
-  border-right: 2px solid rgb(22, 22, 22);
-  border-bottom: 2px solid rgb(22, 22, 22);
+  border-left: 2px solid #00171f;
+  border-right: 2px solid #00171f;
+  border-bottom: 2px solid #00171f;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   background: white;

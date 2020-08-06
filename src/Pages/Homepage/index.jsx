@@ -88,8 +88,9 @@ const Container = styled.div`
   }
 `;
 
-const Name = styled.span`
+const Emphasis = styled.span`
   font-size: 20px;
+  font-weight: 600;
 `;
 
 const ExperienceCol = styled(Col)`
@@ -133,12 +134,31 @@ const ExperienceRow = styled(Row)`
 
 const StyledListItem = styled.li`
   line-height: 2;
+  font-size: 15px;
+  padding: 4px 0px;
+`;
 
-  transition: font-size 0.4s, padding 0.4s;
-  :hover {
-    font-size: 15px;
-    padding: 4px 0px;
+const FlexFooter = styled.footer`
+  display: flex;
+`;
+
+const FooterLink = styled.a`
+  color: black;
+
+  h2 {
+    margin-right: 8px !important;
+    transition: transform 500ms ease-out, font-size 500ms ease-out;
   }
+
+  h2:hover {
+    transform: translateY(-5px);
+    font-weight: 600;
+    font-size: 24px;
+  }
+`;
+
+const Breadcrumb = styled.span`
+  font-weight: 600;
 `;
 
 const Homepage = () => {
@@ -146,22 +166,27 @@ const Homepage = () => {
     {
       link: "https://www.linkedin.com/in/chris--sanchez/",
       icon: faLinkedinIn,
+      linkDesc: "LinkedIn",
     },
     {
       link: "https://github.com/sanchito59",
       icon: faGithub,
+      linkDesc: "Github",
     },
     {
       link: "https://twitter.com/tswasteland_bot",
       icon: faTwitter,
+      linkDesc: "Twitter",
     },
     {
       link: "mailto: c.sanch7@gmail.com",
       icon: faEnvelope,
+      linkDesc: "c.sanch7@gmail.com",
     },
     {
       link: Resume,
       icon: faFileAlt,
+      linkDesc: "Resume",
     },
   ];
 
@@ -382,6 +407,28 @@ const Homepage = () => {
     );
   };
 
+  const Footer = () => {
+    return (
+      <FlexFooter>
+        {socialLinks.map((social) => {
+          return (
+            <span>
+              <FooterLink
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h2>
+                  <Breadcrumb>/</Breadcrumb> {social.linkDesc}
+                </h2>
+              </FooterLink>
+            </span>
+          );
+        })}
+      </FlexFooter>
+    );
+  };
+
   return (
     <Base>
       <FlexContainer>
@@ -403,14 +450,21 @@ const Homepage = () => {
                 <Col lg={20} sm={24} md={24}>
                   <Container>
                     <p>
-                      My name is <Name>Chris Sanchez</Name> and I am a Full
-                      Stack Developer from Portland, Oregon. I love digging into
-                      both the backend architecture of an application as well as
-                      the frontend user interface and experience, joining the
-                      two into a complete experience. I work with JavaScript
-                      ES6, React, Ruby on Rails, PostgreSQL, GraphQL, and Apollo
-                      daily. I am an agile learner, quick to adapt, and
-                      endlessly curious and engaged with learning and growing.
+                      My name is <Emphasis>Chris Sanchez</Emphasis> and I am a{" "}
+                      <Emphasis>Full Stack Developer</Emphasis> from Portland,
+                      Oregon. I love digging into both the backend architecture
+                      of an application as well as the frontend user interface
+                      and experience, joining the two into a complete
+                      experience. I work with{" "}
+                      <strong>
+                        JavaScript ES6, React, Ruby on Rails, PostgreSQL,
+                        GraphQL,
+                      </strong>{" "}
+                      and <strong>Apollo</strong> daily. I am an agile learner,
+                      quick to adapt, and endlessly curious and engaged with
+                      learning and growing. I have humility, a resilience to
+                      frustration or confusion, and most importantly, a growth
+                      mindset with an ability to pick things up quickly.
                     </p>
                   </Container>
                 </Col>
@@ -443,6 +497,13 @@ const Homepage = () => {
           <Col span={20}>
             <SectionTitle>Technical Skills</SectionTitle>
             <SkillsRow />
+          </Col>
+        </Row>
+      </ReactWOW>
+      <ReactWOW animation="fadeInUp">
+        <Row display="flex" justify="center">
+          <Col span={20}>
+            <Footer />
           </Col>
         </Row>
       </ReactWOW>

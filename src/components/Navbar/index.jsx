@@ -13,8 +13,7 @@ const NavbarContainer = styled.nav`
   top: 0;
   z-index: 1;
   transition: background-color 0.7s;
-  background-color: ${(props) =>
-    props.scrolledDown ? "rgb(22, 22, 22)" : "rgb(251, 247, 245);"};
+  background-color: ${(props) => (props.scrolledDown ? "#00171f" : "#fdfffc;")};
 `;
 
 const LinkContainer = styled.div`
@@ -25,29 +24,26 @@ const LinkContainer = styled.div`
 
   :hover {
     background-color: ${(props) =>
-      props.scrolledDown ? "rgb(251, 247, 245)" : "rgb(22, 22, 22)"};
+      props.scrolledDown ? "#fdfffc" : "#00171f"};
 
     a {
-      color: ${(props) =>
-        props.scrolledDown ? "rgb(22, 22, 22)" : "rgb(251, 247, 245)"};
+      color: ${(props) => (props.scrolledDown ? "#00171f" : "#fdfffc")};
     }
   }
 `;
 
 const Navlink = styled(Link)`
-  color: rgb(22, 22, 22);
+  color: #00171f;
   text-decoration: none;
 
-  color: ${(props) =>
-    props.scrolledDown ? "rgb(251, 247, 245);" : "rgb(22, 22, 22)"};
+  color: ${(props) => (props.scrolledDown ? "#fdfffc;" : "#00171f")};
 `;
 
 const EmailLink = styled.a`
-  color: rgb(22, 22, 22);
+  color: #00171f;
   text-decoration: none;
 
-  color: ${(props) =>
-    props.scrolledDown ? "rgb(251, 247, 245);" : "rgb(22, 22, 22)"};
+  color: ${(props) => (props.scrolledDown ? "#fdfffc;" : "#00171f")};
 `;
 
 const Navbar = () => {

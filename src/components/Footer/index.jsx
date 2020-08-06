@@ -5,7 +5,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const StyledFooter = styled.footer`
   width: 100%;
-  background: rgb(22, 22, 22);
+  background: #00171f;
   bottom: 0;
 `;
 
