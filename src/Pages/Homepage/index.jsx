@@ -453,12 +453,11 @@ const Homepage = () => {
                       My name is <Emphasis>Chris Sanchez</Emphasis> and I am a{" "}
                       <Emphasis>Full Stack Developer</Emphasis> from Portland,
                       Oregon. I love digging into both the backend architecture
-                      of an application as well as the frontend user interface
-                      and experience, joining the two into a complete
-                      experience. I work with{" "}
+                      of an application as well as the frontend user interface,
+                      joining the two into a complete experience. I work with{" "}
                       <strong>
-                        JavaScript ES6, React, Ruby on Rails, PostgreSQL,
-                        GraphQL,
+                        JavaScript ES6, React, Ruby on Rails, HTML5/CSS3,
+                        PostgreSQL, GraphQL,
                       </strong>{" "}
                       and <strong>Apollo</strong> daily. I am an agile learner,
                       quick to adapt, and endlessly curious and engaged with
