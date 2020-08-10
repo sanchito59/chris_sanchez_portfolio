@@ -9,6 +9,7 @@ import shelfSearch from "../../assets/images/shelfSearch.png";
 import applianceHub from "../../assets/images/applianceHub.png";
 import wastelandBot from "../../assets/images/wastelandBot.png";
 import ipsumSample from "../../assets/images/ipsumSample.png";
+import colorGuessingGame from "../../assets/images/colorGuessingGame.png";
 
 const projects = [
   {
@@ -64,6 +65,22 @@ const projects = [
     ],
     sourceCode: "https://github.com/sanchito59/ts_wastelandbot",
     liveDemo: "https://twitter.com/TSwasteland_bot",
+  },
+  {
+    title: "Color Guessing Game",
+    image: colorGuessingGame,
+    description:
+      "Color Guessing Game is a game about testing your knowledge of RGB color values. It is a complete rebuild of a previous project that was written with just an index.html, stylesheet, and single JavaScript file. The intention of re-building the game was to explore TypeScript with React as well as using localStorage to persist information on the browser Document, both of which I had never explored before this project.",
+    technologies: [
+      "TypeScript",
+      "Framer Motion",
+      "React.js",
+      "styled-components",
+      "localStorage",
+      "Agile / KANBAN workflow",
+    ],
+    sourceCode: "https://github.com/sanchito59/color-guessing-game",
+    liveDemo: "https://typescript-rgb-guessing.netlify.app/",
   },
   {
     title: "Videogame Ipsum",
