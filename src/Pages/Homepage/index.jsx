@@ -9,6 +9,7 @@ import portrait from "./../../assets/images/portrait.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import Resume from "./../../assets/documents/ChrisSanchezJuly2020pdf.pdf";
+import Portfolio from "../Portfolio";
 import {
   faLinkedinIn,
   faGithub,
@@ -489,6 +490,14 @@ const Homepage = () => {
           <Col span={20}>
             <SectionTitle>Work Experience</SectionTitle>
             <WorkExperienceRow />
+          </Col>
+        </Row>
+      </ReactWOW>
+
+      <ReactWOW animation="fadeInUp">
+        <Row display="flex" justify="center">
+          <Col span={20}>
+            <Portfolio />
           </Col>
         </Row>
       </ReactWOW>

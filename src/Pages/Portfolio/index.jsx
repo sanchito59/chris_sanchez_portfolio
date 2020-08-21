@@ -122,9 +122,9 @@ const ProjectColumn = styled(Col)`
 const Portfolio = () => {
   return (
     <Base>
-      <Row justify="center">
+      <Row justify="center" id="projects">
         <Col lg={24} sm={24} md={24}>
-          <SectionTitle center={true}>Projects</SectionTitle>
+          <SectionTitle>Projects</SectionTitle>
         </Col>
       </Row>
       <FlexContainer>
