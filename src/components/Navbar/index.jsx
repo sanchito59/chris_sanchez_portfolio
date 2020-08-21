@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const NavbarContainer = styled.nav`
   font-family: "Oswald", sans-serif;
@@ -32,7 +31,7 @@ const LinkContainer = styled.div`
   }
 `;
 
-const Navlink = styled(Link)`
+const AnchorLink = styled.a`
   color: #00171f;
   text-decoration: none;
 
@@ -58,17 +57,22 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   });
 
+  const scrollUp = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <NavbarContainer scrolledDown={scrolled}>
       <LinkContainer scrolledDown={scrolled}>
-        <Navlink scrolledDown={scrolled} to="/">
+        <AnchorLink scrolledDown={scrolled} onClick={() => scrollUp()}>
           HOME
-        </Navlink>
+        </AnchorLink>
       </LinkContainer>
       <LinkContainer scrolledDown={scrolled}>
-        <Navlink scrolledDown={scrolled} to="/portfolio">
+        <AnchorLink scrolledDown={scrolled} href="#projects">
           PORTFOLIO
-        </Navlink>
+        </AnchorLink>
       </LinkContainer>
       <LinkContainer scrolledDown={scrolled}>
         <EmailLink href="mailto: c.sanch7@gmail.com" scrolledDown={scrolled}>
