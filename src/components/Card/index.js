@@ -66,6 +66,11 @@ const Description = styled(Col)`
 
 const TechnologyRow = styled(Row)`
   padding: 6px 8px;
+
+    /* Mozilla */
+  li {
+    list-style: inside; 
+  }
 `;
 
 const TechnologyTitle = styled.h2`
