@@ -5,6 +5,7 @@ import SectionTitle from "../../components/SectionTitle";
 import { Col, Row } from "antd";
 import ProjectCard from "../../components/Card";
 import FlexContainer from "../../atoms/FlexContainer";
+import sojourn from "../../assets/images/sojourn.png";
 import shelfSearch from "../../assets/images/shelfSearch.png";
 import applianceHub from "../../assets/images/applianceHub.png";
 import wastelandBot from "../../assets/images/wastelandBot.png";
@@ -12,6 +13,28 @@ import ipsumSample from "../../assets/images/ipsumSample.png";
 import colorGuessingGame from "../../assets/images/colorGuessingGame.png";
 
 const projects = [
+  {
+    title: "Sojourn",
+    image: sojourn,
+    description:
+      "Sojourn is a social site based around sharing locations that are off-the-beaten path or otherwise obscure. It is a Fullstack MERN application partially built with TypeScript (converting currently). It features authentication, profiles, posts, likes, and comments, as well as other views!",
+    technologies: [
+      "TypeScript",
+      "Mongo",
+      "Express",
+      "React",
+      "Node.js",
+      "Authentication",
+      "Authorization",
+      "bcrypt",
+      "Material UI",
+      "Styled Components",
+      "Open Weather API",
+      "Leaflet maps",
+    ],
+    sourceCode: "https://github.com/sanchito59/Sojourn",
+    liveDemo: "https://sojourn-mern.herokuapp.com",
+  },
   {
     title: "Shelf Search",
     image: shelfSearch,
